@@ -54,17 +54,8 @@ Then use:
 ### Screenshots
 
 <p align="center">
-<img src="assets/idle.png" width="48%">
-<img src="assets/charge.png" width="48%">
-</p>
-
-<p align="center">
-<img src="assets/burst.png" width="48%">
-<img src="assets/morph.png" width="48%">
-</p>
-
-<p align="center">
-<img src="assets/colors.png" width="70%">
+  <img src="screenshot-1.png" width="48%" alt="Particle Sphere Screenshot 1">
+  <img src="screenshot-2.png" width="48%" alt="Particle Sphere Screenshot 2">
 </p>
 
 ---
