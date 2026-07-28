@@ -1,12 +1,34 @@
-# Particle Sphere
+<p align="center">
+  <img src="./assets/banner.png" alt="Particle Sphere banner" width="100%">
+</p>
 
-A 3D particle sphere, made of 3000 points, that you control with your bare hands — no mouse, no keyboard, just a webcam. Pinch to charge and burst it apart, spread two hands to grow it, hold a fist to morph its shape, and count your fingers to shift its color.
+<h1 align="center"><i>Particle</i> Sphere</h1>
+<p align="center"><i>A 3000-point 3D particle sphere you control with your bare hands, in real time, in a single HTML file.</i></p>
 
-**[→ Live demo](https://3d-particle.netlify.app)**
+<p align="center">
+  <a href="https://3d-particle.netlify.app"><strong>→ Live demo</strong></a>
+</p>
 
-Built as a single HTML file. No frameworks, no build step, no backend.
+<p align="center">
+  <img alt="Three.js" src="https://img.shields.io/badge/THREE.JS-r160-000000?style=for-the-badge&logo=three.js&logoColor=white">
+  <img alt="MediaPipe" src="https://img.shields.io/badge/MEDIAPIPE-HANDS-00897B?style=for-the-badge&logo=google&logoColor=white">
+  <img alt="JavaScript" src="https://img.shields.io/badge/JAVASCRIPT-VANILLA-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img alt="No build step" src="https://img.shields.io/badge/BUILD%20STEP-NONE-8A8D92?style=for-the-badge">
+  <img alt="Netlify" src="https://img.shields.io/badge/DEPLOYED-NETLIFY-00C7B7?style=for-the-badge&logo=netlify&logoColor=white">
+  <img alt="License" src="https://img.shields.io/badge/LICENSE-MIT-8A8D92?style=for-the-badge">
+</p>
 
 ---
+
+No mouse, no keyboard, no install — pinch to charge and burst the sphere apart, spread two hands to grow it, hold a fist to morph its shape, and count your fingers to shift its color. Everything runs client-side against your webcam.
+
+## Preview
+
+<p align="center">
+  <img src="./assets/screenshot-idle.png" alt="Idle sphere state" width="49%">
+  <img src="./assets/screenshot-burst.png" alt="Burst / explosion state" width="49%">
+</p>
+<p align="center"><sub>Left: idle sphere, tracking active. Right: mid-burst after a charged pinch release.</sub></p>
 
 ## What it does
 
@@ -20,7 +42,7 @@ Built as a single HTML file. No frameworks, no build step, no backend.
 | Hold a fist (~0.8s) | Sphere morphs shape — sphere → torus → double helix → sphere |
 | Show 0–5 fingers | Particle color shifts through a spectrum |
 
-There's also a webcam-as-background toggle, a one-click PNG snapshot, an ambient glow that tracks the current color, and a full keyboard/mouse fallback (drag to rotate, scroll to scale, `Space` to burst, `M` to morph, `0`–`5` to force a color) for whenever a camera isn't available.
+There's also a webcam-as-background toggle, a one-click PNG snapshot, an ambient glow that tracks the current color, motion trails, and a full keyboard/mouse fallback (drag to rotate, scroll to scale, `Space` to burst, `M` to morph, `0`–`5` to force a color) for whenever a camera isn't available.
 
 ## Tech
 
@@ -44,7 +66,7 @@ Any static server works the same way — `npx serve`, VS Code's Live Server, etc
 
 ## Deploying
 
-It's a static file, so any static host works. This project is deployed on [Netlify](https://www.netlify.com/):
+It's a static file, so any static host works. This project is deployed on [Netlify](https://www.netlify.com/) at **[3d-particle.netlify.app](https://3d-particle.netlify.app)**:
 
 ```bash
 git clone https://github.com/<your-username>/<your-repo>.git
