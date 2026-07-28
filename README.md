@@ -1,165 +1,252 @@
-<h1 align="center"><i>Particle</i> Sphere</h1>
-<p align="center"><i>A 3000-point 3D particle sphere you control with your bare hands, in real time, in a single HTML file.</i></p>
+# <h1 align="center">🌌 Particle Sphere</h1>
 
 <p align="center">
-  <a href="https://3d-particle.netlify.app"><strong>→ Live demo</strong></a>
+<b>A real-time hand-controlled 3D particle simulation built with Three.js and MediaPipe.</b><br>
+Control a <b>3000-particle interactive sphere</b> using nothing but your hands—no mouse, no keyboard, no installation required.
 </p>
 
 <p align="center">
-  <img alt="Three.js" src="https://img.shields.io/badge/THREE.JS-r160-000000?style=for-the-badge&logo=three.js&logoColor=white">
-  <img alt="MediaPipe" src="https://img.shields.io/badge/MEDIAPIPE-HANDS-00897B?style=for-the-badge&logo=google&logoColor=white">
-  <img alt="JavaScript" src="https://img.shields.io/badge/JAVASCRIPT-VANILLA-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-  <img alt="No build step" src="https://img.shields.io/badge/BUILD%20STEP-NONE-8A8D92?style=for-the-badge">
-  <img alt="Netlify" src="https://img.shields.io/badge/DEPLOYED-NETLIFY-00C7B7?style=for-the-badge&logo=netlify&logoColor=white">
-  <img alt="License" src="https://img.shields.io/badge/LICENSE-MIT-8A8D92?style=for-the-badge">
-</p>
-
----
-
-No mouse, no keyboard, no install — pinch to charge and burst the sphere apart, spread two hands to grow it, hold a fist to morph its shape, and count your fingers to shift its color. Everything runs client-side against your webcam.
-
-## Preview
-
-<!-- screenshots go here, e.g.:
-<p align="center">
-  <img src=<h1 align="center"><i>Particle</i> Sphere</h1>
-<p align="center"><i>A 3000-point 3D particle sphere you control with your bare hands, in real time, in a single HTML file.</i></p>
-
-<p align="center">
-  <a href="https://3d-particle.netlify.app"><strong>→ Live demo</strong></a>
+<a href="https://3d-particle.netlify.app"><img src="https://img.shields.io/badge/🚀%20Live-Demo-00C7B7?style=for-the-badge"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge"></a>
 </p>
 
 <p align="center">
-  <img alt="Three.js" src="https://img.shields.io/badge/THREE.JS-r160-000000?style=for-the-badge&logo=three.js&logoColor=white">
-  <img alt="MediaPipe" src="https://img.shields.io/badge/MEDIAPIPE-HANDS-00897B?style=for-the-badge&logo=google&logoColor=white">
-  <img alt="JavaScript" src="https://img.shields.io/badge/JAVASCRIPT-VANILLA-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-  <img alt="No build step" src="https://img.shields.io/badge/BUILD%20STEP-NONE-8A8D92?style=for-the-badge">
-  <img alt="Netlify" src="https://img.shields.io/badge/DEPLOYED-NETLIFY-00C7B7?style=for-the-badge&logo=netlify&logoColor=white">
-  <img alt="License" src="https://img.shields.io/badge/LICENSE-MIT-8A8D92?style=for-the-badge">
+<img alt="Three.js" src="https://img.shields.io/badge/Three.js-r160-black?style=for-the-badge&logo=three.js">
+<img alt="MediaPipe" src="https://img.shields.io/badge/MediaPipe-Hands-00897B?style=for-the-badge&logo=google">
+<img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img alt="Netlify" src="https://img.shields.io/badge/Hosted-Netlify-00C7B7?style=for-the-badge&logo=netlify">
+<img alt="Build" src="https://img.shields.io/badge/Build-None-8A8D92?style=for-the-badge">
 </p>
 
 ---
 
-No mouse, no keyboard, no install — pinch to charge and burst the sphere apart, spread two hands to grow it, hold a fist to morph its shape, and count your fingers to shift its color. Everything runs client-side against your webcam.
+# 🎥 Demo
 
-## Preview
+> **Live Website**
 
-<!-- screenshots go here, e.g.:
+https://3d-particle.netlify.app
+
+---
+
+# 📸 Preview
+
+The best way to showcase this project is with a **GIF** at the top followed by screenshots.
+
+```
+assets/
+│
+├── demo.gif
+├── idle.png
+├── charge.png
+├── burst.png
+├── morph.png
+└── colors.png
+```
+
+Then use:
+
 <p align="center">
-  <img src="./assets/screenshot-idle.png" alt="Idle sphere state" width="49%">
-  <img src="./assets/screenshot-burst.png" alt="Burst / explosion state" width="49%">
+<img src="assets/demo.gif" width="90%" alt="Particle Sphere Demo">
 </p>
--->
 
-## What it does
+---
 
-| Gesture | Effect |
-|---|---|
-| Move one hand | Sphere follows your palm and rotates with your motion |
-| Pinch (thumb + index) and hold | A ring at your fingertips charges up |
-| Release the pinch | Sphere explodes into scattered particles, then reforms |
-| Spread two hands apart | Sphere grows |
-| Bring two hands together | Sphere shrinks |
-| Hold a fist (~0.8s) | Sphere morphs shape — sphere → torus → double helix → sphere |
-| Show 0–5 fingers | Particle color shifts through a spectrum |
+### Screenshots
 
-There's also a webcam-as-background toggle, a one-click PNG snapshot, an ambient glow that tracks the current color, motion trails, and a full keyboard/mouse fallback (drag to rotate, scroll to scale, `Space` to burst, `M` to morph, `0`–`5` to force a color) for whenever a camera isn't available.
+<p align="center">
+<img src="assets/idle.png" width="48%">
+<img src="assets/charge.png" width="48%">
+</p>
 
-## Tech
+<p align="center">
+<img src="assets/burst.png" width="48%">
+<img src="assets/morph.png" width="48%">
+</p>
 
-- **[Three.js](https://threejs.org/)** — WebGL particle rendering
-- **[MediaPipe Hands](https://developers.google.com/mediapipe)** — real-time hand landmark tracking, entirely client-side
-- Vanilla JS, HTML, CSS — no framework, no bundler, no dependencies to install
+<p align="center">
+<img src="assets/colors.png" width="70%">
+</p>
 
-Everything lives in one file: `particle-sphere.html`.
+---
 
-## Running it locally
+# ✨ Features
 
-Camera access requires a secure context, so opening the file directly (`file://`) won't work in most browsers. Serve it instead:
+## 🖐️ Gesture Controls
+
+Control the entire scene using natural hand gestures detected through your webcam.
+
+| Gesture                 | Action                      |
+| ----------------------- | --------------------------- |
+| ✋ Move one hand         | Rotate and move the sphere  |
+| 🤏 Pinch & Hold         | Charge an energy ring       |
+| ✨ Release pinch         | Explode the particle sphere |
+| 🙌 Spread both hands    | Increase sphere size        |
+| 🤲 Bring hands together | Shrink sphere               |
+| ✊ Hold a fist (~0.8s)   | Morph geometry              |
+| ☝️ Show 0–5 fingers     | Change particle colors      |
+
+---
+
+## 🌟 Visual Effects
+
+* 3000 animated particles
+* Motion trails
+* Dynamic glow
+* Smooth particle interpolation
+* Morphing geometry
+* Energy charging animation
+* Explosion physics
+* Webcam background mode
+* PNG screenshot capture
+* Responsive full-screen rendering
+
+---
+
+## ⌨️ Keyboard & Mouse Controls
+
+Even without a webcam, the experience remains fully interactive.
+
+| Key         | Action          |
+| ----------- | --------------- |
+| Drag Mouse  | Rotate sphere   |
+| Mouse Wheel | Scale sphere    |
+| Space       | Burst particles |
+| M           | Morph geometry  |
+| 0–5         | Change colors   |
+
+---
+
+# ⚙️ Built With
+
+* **Three.js** – GPU accelerated particle rendering
+* **MediaPipe Hands** – Real-time hand landmark detection
+* **HTML5**
+* **CSS3**
+* **Vanilla JavaScript**
+
+No frameworks.
+
+No build tools.
+
+No npm dependencies.
+
+Everything lives inside a **single HTML file**.
+
+---
+
+# 🚀 Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/particle-sphere.git
+
+cd particle-sphere
+```
+
+Serve locally
 
 ```bash
 python3 -m http.server 8000
 ```
 
-then open `http://localhost:8000/particle-sphere.html`.
+Open
 
-Any static server works the same way — `npx serve`, VS Code's Live Server, etc.
-
-## Deploying
-
-It's a static file, so any static host works. This project is deployed on [Netlify](https://www.netlify.com/) at **[3d-particle.netlify.app](https://3d-particle.netlify.app)**:
-
-```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-# drag the folder into https://app.netlify.com/drop
-# or connect the repo in the Netlify dashboard for auto-deploys on push
+```
+http://localhost:8000
 ```
 
-GitHub Pages, Vercel, and Cloudflare Pages all work identically — just make sure the site is served over HTTPS (or `localhost`), since browsers block camera access otherwise.
+You can also use:
 
-## Browser support
+* Live Server (VS Code)
+* npx serve
+* Any static web server
 
-Needs a browser with WebGL and `getUserMedia` support — recent Chrome, Edge, or Firefox on desktop. Performance depends on your GPU and how well your webcam feed lights your hands; try to keep your hand clearly lit and in-frame for the most reliable tracking.
+> Camera permissions require HTTPS or localhost.
 
-## License
+---
 
-MIT — do whatever you'd like with it.">
-  <img src="./assets/screenshot-burst.png" alt="Burst / explosion state" width="49%">
+# 🌐 Deployment
+
+Since this project is entirely static, deployment is effortless.
+
+Supported platforms:
+
+* Netlify
+* Vercel
+* GitHub Pages
+* Cloudflare Pages
+
+Simply upload the project folder or connect your Git repository.
+
+---
+
+# 📂 Project Structure
+
+```
+Particle-Sphere/
+
+│
+├── particle-sphere.html
+├── README.md
+│
+└── assets/
+    ├── demo.gif
+    ├── idle.png
+    ├── charge.png
+    ├── burst.png
+    ├── morph.png
+    └── colors.png
+```
+
+---
+
+# ⚡ Performance
+
+* ~3000 GPU-rendered particles
+* Real-time hand tracking
+* 60 FPS on most modern desktops
+* Runs entirely on-device
+* No data leaves your computer
+
+---
+
+# 🌍 Browser Support
+
+✔ Chrome
+
+✔ Edge
+
+✔ Firefox
+
+✔ Brave
+
+WebGL and `getUserMedia()` support are required.
+
+---
+
+# 💡 Future Improvements
+
+* Multi-user interaction
+* Gesture recording
+* VR/WebXR support
+* More particle presets
+* Physics-based interactions
+* Mobile optimization
+
+---
+
+# 📜 License
+
+Released under the **MIT License**.
+
+Feel free to use, modify, and build upon this project.
+
+---
+
+<p align="center">
+
+Made with ❤️ using Three.js + MediaPipe
+
 </p>
--->
 
-## What it does
-
-| Gesture | Effect |
-|---|---|
-| Move one hand | Sphere follows your palm and rotates with your motion |
-| Pinch (thumb + index) and hold | A ring at your fingertips charges up |
-| Release the pinch | Sphere explodes into scattered particles, then reforms |
-| Spread two hands apart | Sphere grows |
-| Bring two hands together | Sphere shrinks |
-| Hold a fist (~0.8s) | Sphere morphs shape — sphere → torus → double helix → sphere |
-| Show 0–5 fingers | Particle color shifts through a spectrum |
-
-There's also a webcam-as-background toggle, a one-click PNG snapshot, an ambient glow that tracks the current color, motion trails, and a full keyboard/mouse fallback (drag to rotate, scroll to scale, `Space` to burst, `M` to morph, `0`–`5` to force a color) for whenever a camera isn't available.
-
-## Tech
-
-- **[Three.js](https://threejs.org/)** — WebGL particle rendering
-- **[MediaPipe Hands](https://developers.google.com/mediapipe)** — real-time hand landmark tracking, entirely client-side
-- Vanilla JS, HTML, CSS — no framework, no bundler, no dependencies to install
-
-Everything lives in one file: `particle-sphere.html`.
-
-## Running it locally
-
-Camera access requires a secure context, so opening the file directly (`file://`) won't work in most browsers. Serve it instead:
-
-```bash
-python3 -m http.server 8000
-```
-
-then open `http://localhost:8000/particle-sphere.html`.
-
-Any static server works the same way — `npx serve`, VS Code's Live Server, etc.
-
-## Deploying
-
-It's a static file, so any static host works. This project is deployed on [Netlify](https://www.netlify.com/) at **[3d-particle.netlify.app](https://3d-particle.netlify.app)**:
-
-```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-# drag the folder into https://app.netlify.com/drop
-# or connect the repo in the Netlify dashboard for auto-deploys on push
-```
-
-GitHub Pages, Vercel, and Cloudflare Pages all work identically — just make sure the site is served over HTTPS (or `localhost`), since browsers block camera access otherwise.
-
-## Browser support
-
-Needs a browser with WebGL and `getUserMedia` support — recent Chrome, Edge, or Firefox on desktop. Performance depends on your GPU and how well your webcam feed lights your hands; try to keep your hand clearly lit and in-frame for the most reliable tracking.
-
-## License
-
-MIT — do whatever you'd like with it.
